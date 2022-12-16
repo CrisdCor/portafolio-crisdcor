@@ -1,7 +1,8 @@
 :root {
     --black: #1d1d1d;
     --white: #fff;
-    --grey: #F2F2F2;
+    --darkgrey: #363636;
+    --grey: #b4b4b9;
     --dark-blue: #072142;
     --medium-blue: #322b80;
     --light-blue: #95cfff;
@@ -15,7 +16,28 @@ body {
     font-family: 'Sora', sans-serif;
     color: var(--grey);
     margin: 0;
+    box-sizing: border-box;
 }
+
+
+/* Generales */
+
+p {
+    color: var(--grey);
+}
+
+a {
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
+    color: var(--grey);
+}
+
+button {}
+
+
+/* Principal Menu Desktop */
 
 #main-menu {
     position: absolute;
@@ -30,33 +52,60 @@ body {
 
 .logo {
     position: relative;
-    width: 90%;
+    width: 100%;
 }
 
-.menu {
+.nav-menu {
     position: relative;
-    left: 0;
     width: 100%;
     margin: 100px 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-.menu li {
-    position: relative;
-    margin: 0;
+.nav-menu li {
     width: 100%;
     list-style: none;
-    padding: 12px 0;
+    line-height: 3rem;
+    text-align: center;
+    border-top: 1px solid var(--darkgrey);
 }
 
-.menu li a {
-    padding: 0;
+.nav-menu :nth-child(4) {
+    border-bottom: 1px solid var(--darkgrey);
+}
+
+.scrolldown-container {
+    font-size: 0.9em;
+    font-weight: 100;
+    position: fixed;
+    left: 12px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scrolldown-container p {
+    writing-mode: vertical-lr;
+    position: relative;
     margin: 0;
-    font-weight: 200;
-    color: var(--grey);
-    text-align: center;
-    text-decoration: none;
+    padding-bottom: 20px;
+}
+
+.scrolldown-container img {
+    width: 23px;
+    height: 23px;
+    padding-bottom: 10px;
+}
+
+
+/* Right bar - Social */
+
+.social {
+    background: var(--black);
+    width: 50px;
+    height: 100vh;
+    position: absolute;
+    right: 0;
 }
