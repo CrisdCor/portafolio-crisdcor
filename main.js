@@ -3,7 +3,7 @@ const iconMobileMenu = document.querySelector(".mobile-icon-nav-container")
 const iconCloseMobileMenu = document.querySelector(".close-icon-container");
 
 iconMobileMenu.addEventListener("click", openMobileMenu);
-iconCloseMobileMenu.addEventListener("click", closeMobileMenu)
+iconCloseMobileMenu.addEventListener("click", closeMobileMenuNooo)
 
 function openMobileMenu() {
     menuMobile.classList.remove("inactive");
