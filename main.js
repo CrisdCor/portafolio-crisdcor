@@ -8,10 +8,9 @@ iconCloseMobileMenu.addEventListener("click", closeMobileMenu);
 
 
 
-
-setTimeout(function openMobileMenu() {
+function openMobileMenu() {
     menuMobile.classList.remove("inactive");
-}, 2000);
+}
 
 function closeMobileMenu() {
     menuMobile.classList.add("inactive");
