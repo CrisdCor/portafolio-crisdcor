@@ -11,7 +11,9 @@ iconCloseMobileMenu.addEventListener("click", closeMobileMenu);
 
 
 function openMobileMenu() {
-    menuMobile.classList.remove("inactive");
+    setTimeout(function(){
+        menuMobile.classList.remove("inactive");
+    },350);
 }
 
 

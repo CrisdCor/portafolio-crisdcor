@@ -264,6 +264,8 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                transform: translate3d(0,0,0);
+                transition: transform 700ms;
             }
             
             .logo-md {
@@ -442,7 +444,7 @@
             }
             
             .inactive {
-                display: none;
+                transform: translate3d(0,-100%,0);
             }
             /* ***** Media Queries ***** */
             
@@ -456,6 +458,7 @@
                 }
                 .home {
                     padding: 0;
+                    
                 }
                 .home h1 {
                     font-size: 3rem;
@@ -463,9 +466,9 @@
                 }
                 .home-presentation {
                     position: absolute;
-                    /* top: 60px; */
                     display: flex;
                     flex-direction: column;
+                    align-items: center;
                     padding: 0;
                 }
                 .home-name div:nth-child(1) {
@@ -482,12 +485,17 @@
                     transition: 600ms;
                 }
                 .home-presentation p {
-                    width: 100%;
-                    font-size: var(--md);
-                    letter-spacing: 1px;
-                    text-align: justify;
-                    padding: 0 16px;
+                    font-size: var(--sm);
+                    letter-spacing: 0;
+                    text-align: center;
+                    padding: 0 8px;
                     box-sizing: border-box;
+                }
+
+                .home-presentation p span{
+                    font-size: var(--md);
+                    padding: 0;
+                    margin: 0;
                 }
                 .section-contact {
                     /* position: absolute; */
