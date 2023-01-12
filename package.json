@@ -1,0 +1,20 @@
+{
+  "name": "portafolio-crisdcor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrisdCor/portafolio-crisdcor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrisdCor/portafolio-crisdcor/issues"
+  },
+  "homepage": "https://github.com/CrisdCor/portafolio-crisdcor#readme"
+}

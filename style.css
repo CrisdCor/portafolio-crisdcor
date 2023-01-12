@@ -217,10 +217,6 @@
                 width: 114px;
             }
             
-            .mobile-logo:hover {
-                cursor: pointer;
-            }
-            
             .mobile-logo img {
                 width: 70px;
             }
@@ -494,7 +490,6 @@
                     box-sizing: border-box;
                 }
                 .section-contact {
-                    z-index: 3000;
                     /* position: absolute; */
                     top: 0;
                     left: 0;
