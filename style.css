@@ -114,31 +114,60 @@
             }
             /* ***** Menu Desktop ***** */
             
-            .desktop-menu {
+            .menu {
                 position: fixed;
                 top: 0;
                 left: 0;
                 bottom: 0;
                 z-index: 6000;
-                background: var(--stronge-dark-blue);
+            
                 padding: 0;
-                width: 180px;
+                width: 80px;
                 height: 100vh;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
             }
-            
-            .logo-lg {
-                position: relative;
-                width: 100%;
-            }
-            
-            .desktop-nav {
-                width: 100%;
-                margin: 100px 0;
+
+        
+            .line-menu{
+                
+                width: 60px;
+                height: 60px;
+                margin: 12px 0;
+                border-radius: 50%;
                 display: flex;
                 flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.5s;
+
+            }
+
+            .line-menu:hover{
+                box-shadow: 0 0 12px inset var(--ligh-grey);
+                transition: box-shadow 0.3s;
+            }
+
+            .line-menu div{
+                background: var(--ligh-grey);
+                
+                border-radius: 2px;
+                width: 60%;
+                height: 4px;
+            }
+           
+            
+            .list-nav {
+                width: 100%;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .list-nav span{
+                visibility: hidden;
             }
             
             .desktop-nav :nth-child(4) {
@@ -462,7 +491,7 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                animation: 2s loader 2s ease-in-out forwards;
+                animation: 2s loader 1.8s ease-in-out forwards;
             }
             
             @keyframes loader {
