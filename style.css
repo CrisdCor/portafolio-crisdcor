@@ -44,6 +44,7 @@
             p {
                 color: var(--ligh-grey);
                 font-size: var(--md);
+                margin: 0;
             }
             
             a {
@@ -288,7 +289,8 @@
                 position: fixed;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: end ;
+                align-items: center;
                 width: 100%;
                 height: 100vh;
                 background: var(--gradient-dark);
@@ -303,6 +305,8 @@
             .global-menu-list {
                 display: flex;
                 flex-direction: column;
+                width: 100%;
+                margin: 0 0 60px 0;
             }
             
             .global-menu-list a {
@@ -311,65 +315,81 @@
                 font-weight: 400;
                 color: var(--white);
             }
-            /* Home Section */
+
+            .global-menu-social-media {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                margin: 60px 0;
+                
+            }
             
-            .home {
+            .global-menu-social-media a {
+                position: relative;
+                width: 40px;
+                height: 40px;
+                margin: 0 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+
+            
+            .global-menu-social-media img {
+                width: 50%;
+                position: absolute;
+                transition: all 0.5s;
+            }
+
+            /* *** HOME SECTION *** */
+            
+            .home-section {
                 background: var(--gradient-dark);
                 height: 100vh;
                 width: 100%;
-                position: relative;
-                top: 0;
-                left: 0;
-                padding-left: 180px;
                 box-sizing: border-box;
-                display: flex;
-                align-items: center;
+                position: relative;
             }
-            
-            .home-presentation {
-                position: absolute;
-                display: flex;
-                flex-direction: column;
-                padding-left: 60px;
-            }
-            
-            .home-presentation h1 {
-                padding-left: 40px;
-            }
-            
-            .home-name {
-                display: flex;
-                align-items: center;
-            }
-            
-            .home-name div {
-                text-align: center;
-            }
-            
-            .home-name :nth-child(1) h1 {
-                width: 180px;
-                margin-right: 24px;
-                font-size: 3rem;
-            }
-            
-            .home-name h2 {
-                color: var(--white);
+
+            .home-section h1{
                 font-size: 6rem;
-                transition: 600ms;
+                position: absolute;
+                top: 30%;
+                left: 13%;
+                color: var(--white);
+                letter-spacing: 6px;
             }
-            
-            .home-name div:nth-child(odd):hover h2 {
-                transform: scaleX(0.8) scaleY(1.2);
-                color: var(--lemon);
-                transition: transform 400ms;
+
+            .home-section span{
+                
+                position: absolute;
+                top: 60%;
+                left: 35%;
             }
-            
-            .home-name div:nth-child(even):hover h2 {
-                transform: scaleX(1.2) scaleY(0.8);
-                color: var(--lemon);
-                transition: transform 400ms;
+
+            .home-section div{
+                position: absolute;
+                width: 45%;
+                height: 3px;
+                background: var(--gradient-lemon-yellow);
+                top: 52%;
+                left: 20%;
             }
+ 
+
+  
             
+
+
+
+            
+            
+
+           
+           
             .home-presentation p {
                 width: 100%;
                 font-size: var(--lr);
@@ -379,19 +399,8 @@
                 box-sizing: border-box;
                 line-height: 36px;
             }
-            
-            .home-presentation p::first-letter {
-                color: var(--white);
-                font-weight: bold;
-                font-size: var(--xlr);
-            }
-            
-            .home-presentation p span {
-                color: var(--lemon);
-                font-size: 1.5rem;
-                font-weight: bolder;
-                text-transform: uppercase;
-            }
+                       
+
             /* ***** Contact Section ***** */
             
             .section-contact {
