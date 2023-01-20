@@ -1,23 +1,12 @@
-const menuMobile = document.querySelector(".mobile-menu");
+const menuOpen = document.querySelector('.btn-menu');
+const mobileMenu = document.querySelector('.global-menu');
 
-const iconMobileMenu = document.querySelector(".mobile-icon-nav-container");
-const iconCloseMobileMenu = document.querySelector(".close-icon-container");
-const btnContact = document.getElementsByTagName('a')[3];
-
-
-iconMobileMenu.addEventListener("click", openMobileMenu);
-iconCloseMobileMenu.addEventListener("click", closeMobileMenu);
-
-
-
-function openMobileMenu() {
-    setTsimeout(function() {
-        menuMobile.classList.remove("inactive");
-    }, 350);
-}
-
-
-
-function closeMobileMenu() {
-    menuMobile.classList.add("inactive");
-}
+menuOpen.addEventListener('click', () => {
+    if (menuOpen.classList.contains('hamb-menu-open')) {
+        menuOpen.classList.remove('hamb-menu-open');
+        mobileMenu.classList.add('global-menu-inactive');
+    } else {
+        menuOpen.classList.add('hamb-menu-open');
+        mobileMenu.classList.remove('global-menu-inactive');
+    }
+})
