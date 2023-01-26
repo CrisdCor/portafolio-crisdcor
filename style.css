@@ -135,6 +135,19 @@ button:hover {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 8px 12px;
+    transform: translateX(-100%);
+
+    animation: menu-desktop-intro 1s ease-in-out forwards;
+    animation-delay: 5.5s;
+}
+
+@keyframes menu-desktop-intro {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
 
 .big-logo {
@@ -172,7 +185,7 @@ button:hover {
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 40%;
+    width: 70%;
 }
 
 .list-nav span {
@@ -239,6 +252,20 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transform: translateY(-100%);
+
+    animation: mobile-menu-intro 0.7s ease-in-out forwards;
+    animation-delay: 5.6s;
+}
+
+@keyframes mobile-menu-intro {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+        
+    }
 }
 
 .mobile-logo-content {
@@ -311,7 +338,8 @@ button:hover {
 }
 
 .global-menu-inactive {
-    transform: translateX(-120%);
+    transform: translateX(-100%);
+    visibility: none;
 }
 
 .global-menu-list {
@@ -319,13 +347,26 @@ button:hover {
     flex-direction: column;
     width: 100%;
     margin: 0 0 60px 0;
+    visibility: visible;
 }
 
 .global-menu-list a {
+    display: grid;
+    place-content: center;
     height: 90px;
     font-size: 2.5rem;
     font-weight: 400;
     color: var(--white);
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition-property: transform;
+    transition-delay: 0.35s;
+    transition-duration: 1s;
+}
+
+.list-hidden a {
+    transform: scaleY(0);
+    transform-origin: bottom;
 }
 
 .global-menu-social-media {
@@ -417,76 +458,126 @@ button:hover {
 /* SECTION - LOADER */
 
 .loader {
-    z-index: 10000;
-    background: var(--gradient-dark);
+    z-index: 7000;
     position: absolute;
     top: 0;
     left: 0;
-    margin: 0;
-    padding: 0;
     width: 100%;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: 2s loader 1.8s ease-in-out forwards;
+    background: var(--gradient-dark);
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr 3px;
+    grid-template-columns: 1fr;
+
+    animation: close-loader 1s ease-in-out forwards;
+    animation-delay: 5s;
+
 }
 
-@keyframes loader {
+@keyframes close-loader {
     0% {
-        transform: translateX(0%);
+        transform: translateY(0);
     }
     100% {
-        transform: translateX(-200%);
+        transform: translateY(-100%);
+        visibility: hidden;
     }
 }
 
 .loader img {
-    width: 100px;
+    width: 120px;
     opacity: 0;
-    animation: loader-img 2s ease-in-out forwards;
+    animation: logo-exist 4s ease-in-out forwards;
 }
 
-@keyframes loader-img {
+@keyframes logo-exist {
     0% {
         opacity: 0;
     }
-    100% {
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    30.5% {
+        opacity: 0.1;
+    }
+    31% {
         opacity: 0.8;
     }
-}
-
-.loader-bar-container {
-    background: var(--medium-blue);
-    width: 280px;
-    height: 6px;
-    border-radius: 12px;
-    position: relative;
-    overflow: hidden;
-}
-
-.loader-bar {
-    position: absolute;
-    background: var(--gradient-lemon-yellow);
-    height: 100%;
-    width: 100%;
-    transform: translateX(-320px);
-    animation: loader-bar 2s ease-in-out forwards;
-}
-
-@keyframes loader-bar {
-    0% {
-        transform: translateX(-320px);
+    32% {
+        opacity: 0.3;
     }
-    /* 40% {
-                    transform: translateX(-220px);
-                } */
-    70% {
-        transform: translateX(-120px);
+    33% {
+        opacity: 0.6;
+    }
+    50.5% {
+        opacity: 0.1;
+    }
+    51% {
+        opacity: 0.8;
+    }
+    52% {
+        opacity: 0.3;
+    }
+    53% {
+        opacity: 0.6;
+    }
+    60.5% {
+        opacity: 0.1;
+    }
+    61% {
+        opacity: 0.8;
+    }
+    62% {
+        opacity: 0.3;
+    }
+    63% {
+        opacity: 0.6;
+    }
+    64% {
+        opacity: 0.1;
+    }
+    64.1% {
+        opacity: 0.4;
+    }
+    65% {
+        opacity: 0.6;
+    }
+    75% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.laser-line{
+    width: 100%;
+    height: 3px;
+    background: var(--gradient-lemon-yellow);
+    opacity: 0;
+
+    animation: laser-line 2s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+@keyframes laser-line {
+    0% {
+        transform: scaleX(0.05) ;
+        opacity: 0;
+    }
+
+    38% {
+        transform: scaleX(0.05) ;
+        opacity: 1;
     }
     100% {
-        transform: translateX(0px);
+        transform: scaleX(1) ;
+        opacity: 1;
     }
 }
 
