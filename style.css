@@ -135,6 +135,19 @@ button:hover {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 8px 12px;
+    transform: translateX(-100%);
+
+    animation: menu-desktop-intro 1s ease-in-out forwards;
+    animation-delay: 5.5s;
+}
+
+@keyframes menu-desktop-intro {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
 
 .big-logo {
@@ -172,7 +185,7 @@ button:hover {
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 40%;
+    width: 70%;
 }
 
 .list-nav span {
@@ -239,6 +252,20 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transform: translateY(-100%);
+
+    animation: mobile-menu-intro 0.7s ease-in-out forwards;
+    animation-delay: 5.6s;
+}
+
+@keyframes mobile-menu-intro {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+        
+    }
 }
 
 .mobile-logo-content {
@@ -297,7 +324,7 @@ button:hover {
 /* ***** GLOBAL MENU ***** */
 
 .global-menu {
-    z-index: 7000;
+    z-index: 5000;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -438,18 +465,22 @@ button:hover {
     width: 100%;
     height: 100vh;
     background: var(--gradient-dark);
-    animation: close-loader 1s ease-in-out forwards;
-    animation-delay: 4s;
     display: grid;
     place-items: center;
+    grid-template-rows: 1fr 3px;
+    grid-template-columns: 1fr;
+
+    animation: close-loader 1s ease-in-out forwards;
+    animation-delay: 5s;
+
 }
 
 @keyframes close-loader {
     0% {
-        transform: translateX(0);
+        transform: translateY(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateY(-100%);
         visibility: hidden;
     }
 }
@@ -518,11 +549,35 @@ button:hover {
     75% {
         opacity: 0.1;
     }
-    90% {
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.laser-line{
+    width: 100%;
+    height: 3px;
+    background: var(--gradient-lemon-yellow);
+    opacity: 0;
+
+    animation: laser-line 2s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+@keyframes laser-line {
+    0% {
+        transform: scaleX(0.05) ;
+        opacity: 0;
+    }
+
+    38% {
+        transform: scaleX(0.05) ;
         opacity: 1;
     }
     100% {
-        opacity: 0;
+        transform: scaleX(1) ;
+        opacity: 1;
     }
 }
 
