@@ -1,6 +1,6 @@
 const menuOpen = document.querySelector('.btn-menu');
 const mobileMenu = document.querySelector('.global-menu');
-const mobileListMenu=document.querySelector('.global-menu-list');
+const mobileListMenu = document.querySelector('.global-menu-list');
 
 menuOpen.addEventListener('click', () => {
     if (menuOpen.classList.contains('hamb-menu-open')) {

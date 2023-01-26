@@ -315,7 +315,6 @@ button:hover {
     visibility: none;
 }
 
-
 .global-menu-list {
     display: flex;
     flex-direction: column;
@@ -336,16 +335,12 @@ button:hover {
     transition-property: transform;
     transition-delay: 0.35s;
     transition-duration: 1s;
-
 }
 
-.list-hidden a{
+.list-hidden a {
     transform: scaleY(0);
     transform-origin: bottom;
 }
-
-
-
 
 .global-menu-social-media {
     display: flex;
@@ -436,167 +431,100 @@ button:hover {
 /* SECTION - LOADER */
 
 .loader {
-    z-index: 6000;
+    z-index: 7000;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    display: flex;
-
-    animation: close-loader 1s forwards;
-    animation-delay: 3s;
+    background: var(--gradient-dark);
+    animation: close-loader 1s ease-in-out forwards;
+    animation-delay: 4s;
+    display: grid;
+    place-items: center;
 }
 
 @keyframes close-loader {
-    0%{
-        visibility: visible;
-    }
-    100%{
-        visibility: hidden;
-    }
-}
-
-.left-loader{
-    width: 50%;
-    height: 100%;
-    background: var(--gradient-dark);
-
-    animation: open-left-loader 1.2s forwards;
-    animation-delay: 3s;
-}
-
-@keyframes open-left-loader {
-    0%{
+    0% {
         transform: translateX(0);
     }
-    100%{
+    100% {
         transform: translateX(-100%);
         visibility: hidden;
     }
 }
 
-.right-loader{
-    width: 50%;
-    height: 100%;
-    background: var(--gradient-dark);
-
-    animation: open-right-loader 1.2s forwards;
-    animation-delay: 3s;
-}
-
-@keyframes open-right-loader {
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(200%);
-        visibility: hidden;
-    }
-}
-
-.loader img{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
+.loader img {
     width: 120px;
     opacity: 0;
-
-    animation: logo-exist 2s ease-in-out forwards;
+    animation: logo-exist 4s ease-in-out forwards;
 }
 
 @keyframes logo-exist {
-    0%{
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    30.5% {
+        opacity: 0.1;
+    }
+    31% {
+        opacity: 0.8;
+    }
+    32% {
+        opacity: 0.3;
+    }
+    33% {
+        opacity: 0.6;
+    }
+    50.5% {
+        opacity: 0.1;
+    }
+    51% {
+        opacity: 0.8;
+    }
+    52% {
+        opacity: 0.3;
+    }
+    53% {
+        opacity: 0.6;
+    }
+    60.5% {
+        opacity: 0.1;
+    }
+    61% {
+        opacity: 0.8;
+    }
+    62% {
+        opacity: 0.3;
+    }
+    63% {
+        opacity: 0.6;
+    }
+    64% {
+        opacity: 0.1;
+    }
+    64.1% {
         opacity: 0.4;
     }
-    10%{
-        opacity: 0.8;
+    65% {
+        opacity: 0.6;
     }
-    10.5%{
-        opacity: 0.3;
+    75% {
+        opacity: 0.1;
     }
-    20%{
+    90% {
         opacity: 1;
     }
-    20.5%{
-        opacity: 0.5;
-    }
-    30%{
-        opacity: 1;
-    }
-    30.5%{
-        opacity: 0.5;
-    }
-    40%{
-        opacity: 1;
-    }
-    40.5%{
-        opacity: 0.5;
-    }
-    50%{
-        opacity: 1;
-    }
-    50.5%{
-        opacity: 0.5;
-    }
-    80%{
-        opacity: 1;
-    }
-    80.5%{
-        opacity: 0.3;
-    }
-    90%{
-        opacity: 0.8;
-    }
-    90.5%{
-        opacity: 0.3;
-    }
-    100%{
+    100% {
         opacity: 0;
     }
 }
-
-.laser-line{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    width: 4px;
-    height: 4px;
-    
-    background: var(--gradient-lemon-yellow);
-    opacity: 0;
-
-    animation: laser-line 1s ease-in-out forwards;
-    animation-delay: 2s;
-
-}
-
-@keyframes laser-line {
-    0%{
-        opacity: 0;
-    }
-    20%{
-        opacity: 1;
-        transform: rotate(-90deg)
-    }
-    99%{
-        transform: rotate(-90deg) scaleX(400);
-        opacity: 1;
-
-    }
-    100%{
-        transform: rotate(-90deg) scaleX(400);
-        opacity: 0;
-    }
-
-}
-
 
 
 /* ***** Media Queries ***** */
