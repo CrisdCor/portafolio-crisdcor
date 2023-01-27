@@ -136,16 +136,15 @@ button:hover {
     justify-content: space-between;
     box-shadow: 0 8px 12px;
     transform: translateX(-100%);
-
     animation: menu-desktop-intro 1s ease-in-out forwards;
-    animation-delay: 5.5s;
+    animation-delay: 4s;
 }
 
 @keyframes menu-desktop-intro {
-    0%{
+    0% {
         transform: translateX(-100%);
     }
-    100%{
+    100% {
         transform: translateX(0);
     }
 }
@@ -166,7 +165,7 @@ button:hover {
 
 .list-nav a {
     position: relative;
-    width: 80%;
+    width: 90%;
     height: 50px;
     display: flex;
     place-items: center;
@@ -185,14 +184,14 @@ button:hover {
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 70%;
+    width: 60%;
 }
 
 .list-nav span {
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    left: 130%;
+    left: 70%;
     height: 32px;
     width: 100px;
     border: 1px solid var(--ligh-grey);
@@ -203,6 +202,7 @@ button:hover {
     justify-content: center;
     transition: all 0.2s;
     color: var(--white);
+    transform: rotate(-90deg);
 }
 
 .list-nav a:hover span {
@@ -253,9 +253,8 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     transform: translateY(-100%);
-
     animation: mobile-menu-intro 0.7s ease-in-out forwards;
-    animation-delay: 5.6s;
+    animation-delay: 4s;
 }
 
 @keyframes mobile-menu-intro {
@@ -264,7 +263,6 @@ button:hover {
     }
     100% {
         transform: translateY(0);
-        
     }
 }
 
@@ -355,13 +353,13 @@ button:hover {
     place-content: center;
     height: 90px;
     font-size: 2.5rem;
-    font-weight: 400;
+    font-weight: 300;
     color: var(--white);
     transform: scaleY(1);
     transform-origin: bottom;
     transition-property: transform;
     transition-delay: 0.35s;
-    transition-duration: 1s;
+    transition-duration: 0.8s;
 }
 
 .list-hidden a {
@@ -417,6 +415,23 @@ button:hover {
     width: 100%;
 }
 
+.home-section h1,
+p {
+    animation: open-section 0.4s linear forwards;
+    animation-delay: 4s;
+}
+
+@keyframes open-section {
+    0% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+    100% {
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+}
+
 .home-section-name div {
     background: var(--gradient-lemon-yellow);
     height: 3px;
@@ -469,10 +484,8 @@ button:hover {
     place-items: center;
     grid-template-rows: 1fr 3px;
     grid-template-columns: 1fr;
-
     animation: close-loader 1s ease-in-out forwards;
-    animation-delay: 5s;
-
+    animation-delay: 3.5s;
 }
 
 @keyframes close-loader {
@@ -488,7 +501,7 @@ button:hover {
 .loader img {
     width: 120px;
     opacity: 0;
-    animation: logo-exist 4s ease-in-out forwards;
+    animation: logo-exist 2s ease-in-out forwards;
 }
 
 @keyframes logo-exist {
@@ -549,34 +562,31 @@ button:hover {
     75% {
         opacity: 0.1;
     }
-
     100% {
         opacity: 1;
     }
 }
 
-.laser-line{
+.laser-line {
     width: 100%;
     height: 3px;
     background: var(--gradient-lemon-yellow);
     opacity: 0;
-
-    animation: laser-line 2s ease-in-out forwards;
-    animation-delay: 3s;
+    animation: laser-line 1.5s ease-in-out forwards;
+    animation-delay: 2s;
 }
 
 @keyframes laser-line {
     0% {
-        transform: scaleX(0.05) ;
+        transform: scaleX(0.05);
         opacity: 0;
     }
-
     38% {
-        transform: scaleX(0.05) ;
+        transform: scaleX(0.05);
         opacity: 1;
     }
     100% {
-        transform: scaleX(1) ;
+        transform: scaleX(1);
         opacity: 1;
     }
 }
@@ -616,6 +626,9 @@ button:hover {
 
 @media(min-width: 641px) {
     .mobile-menu {
+        display: none;
+    }
+    .global-menu {
         display: none;
     }
 }
